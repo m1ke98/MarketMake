@@ -27,7 +27,7 @@ export const Image = styled.img`
   pointer-events: none;
 `;
 
-export const Link = styled.a.attrs({
+export const Alink = styled.a.attrs({
   target: "_blank",
   rel: "noopener noreferrer",
 })`

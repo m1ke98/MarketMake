@@ -2,8 +2,9 @@ import React from "react";
 import { Contract } from "@ethersproject/contracts";
 import { getDefaultProvider } from "@ethersproject/providers";
 import { useQuery } from "@apollo/react-hooks";
+import { BrowserRouter, Route, Link } from "react-router-dom";
 
-import { Body, Button, Header, Image, Link } from "./components";
+import { Body, Button, Header, Image, Alink } from "./components";
 import logo from "./ethereumLogo.png";
 import useWeb3Modal from "./hooks/useWeb3Modal";
 
@@ -61,11 +62,11 @@ function App() {
         <Button hidden onClick={() => readOnChainData()}>
           Read On-Chain Balance
         </Button>
-        <Link href="https://ethereum.org/developers/#getting-started" style={{ marginTop: "8px" }}>
+        <Alink href="https://ethereum.org/developers/#getting-started" style={{ marginTop: "8px" }}>
           Learn Ethereum
-        </Link>
-        <Link href="https://reactjs.org">Learn React</Link>
-        <Link href="https://thegraph.com/docs/quick-start">Learn The Graph</Link>
+        </Alink>
+        <Alink href="https://reactjs.org">Learn React</Alink>
+        <Alink href="https://thegraph.com/docs/quick-start">Learn The Graph</Alink>
       </Body>
     </div>
   );
