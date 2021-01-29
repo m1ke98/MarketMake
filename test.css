@@ -16,10 +16,6 @@ code {
     monospace;
 }
 
-.app {
-  background-color: #0b0c10;
-}
-
 .navbar {
   background-color: none;
 }
@@ -46,12 +42,9 @@ h2 {
   height: 100%;
 }
 
-.navbar {
-  background-color: #0b0c10;
-}
-
 .p-container {
   width: 100%;
   height: auto;
+  min-height: 100%;
   position: relative;
 }

@@ -13,7 +13,6 @@ import { addresses, abis } from "@project/contracts";
 import GET_TRANSFERS from "./graphql/subgraph";
 
 import Interface from "./components/Interface.js";
-import About from "./components/About.js";
 
 async function readOnChainData() {
   // Should replace with the end-user wallet, e.g. Metamask
@@ -44,55 +43,22 @@ function WalletButton({ provider, loadWeb3Modal, logoutOfWeb3Modal }) {
 
 function Home() {
   return (
-    <div class="p-container">
-      <Particles id="particles"
-        height="100%"
-        width="100%"
-        params={{
-          particles: {
-            color: {
-              value: "#ffffff"
-            },
-            line_linked: {
-              color: {
-                value: "#ffffff"
-              }
-            },
-            number: {
-              value: 50
-            },
-            size: {
-              value: 3
-            }
-          }
-        }}
-      />
-      <div
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%"
-        }}
-      >
-        <Body>
-          <Image src={logo} alt="react-logo" />
-          <p>
-            Edit <code>packages/react-app/src/App.js</code> and save to reload.
-          </p>
-          {/* Remove the "hidden" prop and open the JavaScript console in the browser to see what this function does */}
-          <Button hidden onClick={() => readOnChainData()}>
-            Read On-Chain Balance
-          </Button>
-          <StdLink href="https://ethereum.org/developers/#getting-started" style={{ marginTop: "8px" }}>
-            Learn Ethereum
-          </StdLink>
-          <StdLink href="https://reactjs.org">Learn React</StdLink>
-          <StdLink href="https://thegraph.com/docs/quick-start">Learn The Graph</StdLink>
-        </Body>
-      </div>
-      <About />
+    <div>
+      <Body>
+        <Image src={logo} alt="react-logo" />
+        <p>
+          Edit <code>packages/react-app/src/App.js</code> and save to reload.
+        </p>
+        {/* Remove the "hidden" prop and open the JavaScript console in the browser to see what this function does */}
+        <Button hidden onClick={() => readOnChainData()}>
+          Read On-Chain Balance
+        </Button>
+        <StdLink href="https://ethereum.org/developers/#getting-started" style={{ marginTop: "8px" }}>
+          Learn Ethereum
+        </StdLink>
+        <StdLink href="https://reactjs.org">Learn React</StdLink>
+        <StdLink href="https://thegraph.com/docs/quick-start">Learn The Graph</StdLink>
+      </Body>
     </div>
   );
 }
@@ -145,19 +111,55 @@ function App() {
   }, [loading, error, data]);
   
   return (
-    <Router>
-      <div class="app">
-        <Navbar />
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/interface">
-            <Interface />
-          </Route>
-        </Switch>
+    <div class="p-container">
+      <Particles id="particles"
+        height="100%"
+        width="100%"
+        params={{
+          particles: {
+            color: {
+              value: "#ffffff"
+            },
+            line_linked: {
+              color: {
+                value: "#ffffff"
+              }
+            },
+            number: {
+              value: 50
+            },
+            size: {
+              value: 3
+            }
+          }
+        }}
+      />
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%"
+        }}
+      >
+        <div>
+          <Router>
+            <div class="main-body">
+              <Navbar />
+              <Switch>
+                <Route exact path="/">
+                  <Home />
+                </Route>
+                <Route path="/interface">
+                  <Interface />
+                </Route>
+              </Switch>
+            </div>
+          </Router>
+        </div>
       </div>
-    </Router>
+    </div>
   );
 }
   
