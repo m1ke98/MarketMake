@@ -40,6 +40,18 @@ h2 {
   color: #45a29e;
 }
 
+.about {
+  align-items: left;
+  background: none;
+  margin: 150px;
+  padding: 150px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  min-height: calc(100vh - 70px);
+}
+
 #particles {
   background-color: #0b0c10;
   width: 100%;
@@ -54,4 +66,8 @@ h2 {
   width: 100%;
   height: auto;
   position: relative;
+}
+
+.small-text {
+  font-size: 15px;
 }

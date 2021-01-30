@@ -78,18 +78,20 @@ function Home() {
       >
         <Body>
           <Image src={logo} alt="react-logo" />
-          <p>
-            Edit <code>packages/react-app/src/App.js</code> and save to reload.
-          </p>
+          <h1>
+            Pending...
+          </h1>
           {/* Remove the "hidden" prop and open the JavaScript console in the browser to see what this function does */}
           <Button hidden onClick={() => readOnChainData()}>
             Read On-Chain Balance
           </Button>
-          <StdLink href="https://ethereum.org/developers/#getting-started" style={{ marginTop: "8px" }}>
-            Learn Ethereum
-          </StdLink>
-          <StdLink href="https://reactjs.org">Learn React</StdLink>
-          <StdLink href="https://thegraph.com/docs/quick-start">Learn The Graph</StdLink>
+          <p>
+            The Peer-to-Peer NFT Pawn Shop.
+          </p>
+          <hr></hr>
+          <p class="small-text">
+            Shoutout to Markus Waas for the amazing <a href="https://ethereum.org/en/developers/tutorials/kickstart-your-dapp-frontend-development-wth-create-eth-app/#installation">template</a>.
+          </p>
         </Body>
       </div>
       <About />

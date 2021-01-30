@@ -1,17 +1,19 @@
 import React, { Component } from "react";
-import { Body } from ".";
 
 class About extends Component {
   render() {
     return (
-      <Body>
+      <div class="about">
         <h1>
-          Hello!
+          Pending...
         </h1>
         <p>
-          I am a Mechanical Engineer turned Software Developer and this is my Decentralized Application.
+          Pending... is a Peer-to-Peer pawn shop where users can exchange their game assets or lend them out to other users.
+
+          Dapp gaming is becoming a larger ecosystem everyday the need for the ability to exchange assets for fixed time periods is growing.
+          Players looking to snag some high quality game assets for short time periods such as tournaments now have the ability to borrow them for a refundable collateral deposit + fixed fee set by the lender. 
         </p>
-      </Body>
+      </div>
     );
   }
 }
