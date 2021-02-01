@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useQuery } from "@apollo/react-hooks";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -9,9 +9,17 @@ import Home from "./components/Home.js";
 import Navbar from "./components/Navbar.js";
 
 function App() {
+  const ethereum = window.ethereum;
   const { loading, error, data } = useQuery(GET_TRANSFERS);
+  const [address, setAddress]= useState("");
 
-  React.useEffect(() => {
+  if (ethereum) {
+    ethereum.on('accountsChanged', function (accounts) {
+      setAddress(accounts[0]);
+    });
+  }
+
+  useEffect(() => {
     if (!loading && !error && data && data.transfers) {
       console.log({ transfers: data.transfers });
     }
@@ -31,7 +39,7 @@ function App() {
         </Switch>
         <div>
           <h1>
-            Hi
+            {address}
           </h1>
         </div>
       </div>
