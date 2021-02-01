@@ -4,6 +4,7 @@ import { StyledLink, Button } from "./styling/index.js";
 import useWeb3Modal from "./hooks/useWeb3Modal";
 
 function WalletButton({ provider, loadWeb3Modal, logoutOfWeb3Modal }) {
+
     return (
         <Button
             onClick={() => {

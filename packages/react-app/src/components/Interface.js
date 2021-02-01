@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function Interface() {
+export default function Interface(props) {
   const classes = useStyles();
 
   return (
@@ -19,7 +19,7 @@ export default function Interface() {
       <Grid item xs={12}>
         <Grid container justify="center">
           <Paper>
-            H
+            {props.user}
           </Paper>
         </Grid>
       </Grid>

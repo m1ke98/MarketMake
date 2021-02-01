@@ -10,8 +10,9 @@ import Navbar from "./components/Navbar.js";
 
 function App() {
   const ethereum = window.ethereum;
+
   const { loading, error, data } = useQuery(GET_TRANSFERS);
-  const [address, setAddress]= useState("");
+  const [address, setAddress]= useState();
 
   if (ethereum) {
     ethereum.on('accountsChanged', function (accounts) {
@@ -20,6 +21,11 @@ function App() {
   }
 
   useEffect(() => {
+    async function getAccount() {
+      const accounts = await window.ethereum.request({ method: "eth_requestAccounts" });
+      setAddress(accounts[0]);
+    }
+    getAccount();
     if (!loading && !error && data && data.transfers) {
       console.log({ transfers: data.transfers });
     }
@@ -34,14 +40,9 @@ function App() {
             <Home />
           </Route>
           <Route path="/interface">
-            <Interface />
+            <Interface user={address}/>
           </Route>
         </Switch>
-        <div>
-          <h1>
-            {address}
-          </h1>
-        </div>
       </div>
     </Router>
   );
