@@ -1,19 +1,38 @@
-import React, { Component } from "react";
-import { Body } from ".";
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Grid from "@material-ui/core/Grid";
+import Paper from "@material-ui/core/Paper";
 
-class Interface extends Component {
-  render() {
-    return (
-      <Body>
-        <h1>
-          Hello!
-        </h1>
-        <p>
-          Welcome to my dapp...
-        </p>
-      </Body>
-    );
+import OneInchLP from "./Portals/OneInchLP.js";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1
   }
-}
+}));
 
-export default Interface;
+export default function Interface() {
+  const classes = useStyles();
+
+  return (
+    <Grid container className={classes.root} spacing={3}>
+      <Grid item xs={12}>
+        <Grid container justify="center">
+          <Paper>
+            H
+          </Paper>
+        </Grid>
+      </Grid>
+      <Grid item xs={12}>
+        <Grid container justify="center" spacing={3}>
+          <Grid item>
+            <OneInchLP />
+          </Grid>
+          <Grid item>
+            <OneInchLP />
+          </Grid>
+        </Grid>
+      </Grid>
+    </Grid>
+  );
+}

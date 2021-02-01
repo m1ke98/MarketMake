@@ -5,13 +5,10 @@ class About extends Component {
     return (
       <div class="about">
         <h1>
-          Pending...
+          De House of Fi
         </h1>
         <p>
-          Pending... is a Peer-to-Peer pawn shop where users can exchange their game assets or lend them out to other users.
-
-          Dapp gaming is becoming a larger ecosystem everyday the need for the ability to exchange assets for fixed time periods is growing.
-          Players looking to snag some high quality game assets for short time periods such as tournaments now have the ability to borrow them for a refundable collateral deposit + fixed fee set by the lender. 
+          De House of Fi is an application that lets you manage your assets stored within various DeFi protocols in a single location.
         </p>
       </div>
     );
