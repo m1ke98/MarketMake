@@ -7,6 +7,7 @@ import GET_TRANSFERS from "./graphql/subgraph";
 import Interface from "./components/Interface.js";
 import Home from "./components/Home.js";
 import Navbar from "./components/Navbar.js";
+import FlashLoans from "./components/FlashLoans.js";
 
 function App() {
   const ethereum = window.ethereum;
@@ -41,6 +42,9 @@ function App() {
           </Route>
           <Route path="/interface">
             <Interface user={address}/>
+          </Route>
+          <Route path="/flashloans">
+            <FlashLoans user={address}/>
           </Route>
         </Switch>
       </div>

@@ -3,7 +3,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 
-import OneInchLP from "./Portals/OneInchLP.js";
+import OneInchLP from "./portals/OneInchLP.js";
+import AaveLP from "./portals/AaveLP.js";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,7 +30,7 @@ export default function Interface(props) {
             <OneInchLP />
           </Grid>
           <Grid item>
-            <OneInchLP />
+            <AaveLP />
           </Grid>
         </Grid>
       </Grid>

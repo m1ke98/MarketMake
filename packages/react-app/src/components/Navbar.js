@@ -33,9 +33,10 @@ export default function Navbar() {
               </li>
             </ul>
           </div>
-          <div class="mx-auto order-0">
+          <div class="w-50 d-flex mx-auto order-0 justify-content-center">
             <StyledLink to="/">Home</StyledLink>
             <StyledLink to="/interface">Interface</StyledLink>
+            <StyledLink to="/flashloans">Flash Loans</StyledLink>
           </div>
           <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
             <ul class="navbar-nav ms-auto">

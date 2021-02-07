@@ -42,7 +42,7 @@ export default function Home() {
           <Body>
             <Image src={logo} alt="react-logo" />
             <h1>
-              Pending...
+              De House of Fi
             </h1>
             {/* Remove the "hidden" prop and open the JavaScript console in the browser to see what this function does
             <Button hidden onClick={() => readOnChainData()}>
