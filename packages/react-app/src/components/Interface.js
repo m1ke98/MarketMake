@@ -3,8 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 
-import OneInchLP from "./portals/OneInchLP.js";
-import AaveLP from "./portals/AaveLP.js";
+import PriceCard from "./PriceCard.js";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -27,10 +26,7 @@ export default function Interface(props) {
       <Grid item xs={12}>
         <Grid container justify="center" spacing={3}>
           <Grid item>
-            <OneInchLP />
-          </Grid>
-          <Grid item>
-            <AaveLP />
+            <PriceCard />
           </Grid>
         </Grid>
       </Grid>

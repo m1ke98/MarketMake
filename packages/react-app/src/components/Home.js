@@ -42,7 +42,7 @@ export default function Home() {
           <Body>
             <Image src={logo} alt="react-logo" />
             <h1>
-              De House of Fi
+              PH4NT0M
             </h1>
             {/* Remove the "hidden" prop and open the JavaScript console in the browser to see what this function does
             <Button hidden onClick={() => readOnChainData()}>
@@ -50,12 +50,9 @@ export default function Home() {
             </Button>
             */}
             <p>
-              Manage your liquidity in one place.
+              DEX Aggregator and Arbitrage Oracle
             </p>
             <hr></hr>
-            <p class="small-text">
-              Shoutout to Markus Waas for the amazing <a href="https://ethereum.org/en/developers/tutorials/kickstart-your-dapp-frontend-development-wth-create-eth-app/#installation">template</a>.
-            </p>
           </Body>
         </div>
         <About />

@@ -29,7 +29,7 @@ export default function Navbar() {
           <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
             <ul class="navbar-nav me-auto">
               <li class="nav-item active">
-                <h2 class="dapp-title">De House of Fi</h2>
+                <h2 class="dapp-title">PH4NT0M FINANCE</h2>
               </li>
             </ul>
           </div>

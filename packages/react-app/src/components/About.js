@@ -5,10 +5,10 @@ class About extends Component {
     return (
       <div class="about">
         <h1>
-          De House of Fi
+          PH4NT0M FINANCE
         </h1>
         <p>
-          De House of Fi is an application that lets you manage your assets stored within various DeFi protocols in a single location.
+          PH4NT0M is an application that lets you manage your assets stored within various DeFi protocols in a single location.
         </p>
       </div>
     );
